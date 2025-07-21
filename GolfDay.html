@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Linking to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- WebPage Tab Title -->
+    <title>Round Table - Golf Day</title>
+    
+    <!-- Styling for Classes -->
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            visibility: hidden;
+        }
+        
+        .button {
+            display: block;
+            width: 80%;
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 15px;
+            background: linear-gradient(45deg, #ff0000, #ff7400, #ff1100);
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+        }
+
+        .whatsapp {
+            background: linear-gradient(45deg, #075e54, #128c7e, #25d366);
+        }
+
+        .facebook {
+            background: linear-gradient(45deg, #4047ab, #2c26e1, #5665d4);
+        }
+    </style>
+
+    <!-- Script that Hides Page until Poster is Loaded -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var poster = document.querySelector('.Poster');
+            function showPage() {
+                document.body.style.visibility = 'visible';
+            }
+            if (poster.complete) {
+                showPage();
+            } else {
+                poster.addEventListener('load', showPage);
+                poster.addEventListener('error', showPage);
+                // Fallback: show page after 3 seconds even if image hangs
+                setTimeout(showPage, 3000);
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1>Round Table 195 Zwartkops Golf Day</h1>
+
+    <!-- Poster Image -->
+<img src="GolfDay_2025_Poster.png" alt="Golf Day Poster"
+    style="max-width: 350px; width: 90%; height: auto; margin-bottom: 30px;" class="Poster"
+    onerror="document.body.style.visibility='visible';">
+    
+    <p>Join us for a day of golf, fun, and camaraderie!</p>
+    <p>Date: 7th November 2025</p>
+
+    <!-- Footer containing Socials -->
+    <footer>
+        <h2>Follow Our Socials</h2>
+        <div style="display: flex; justify-content: center; gap: 40px; align-items: center;">
+
+            <a href="https://www.facebook.com/rt195zwartkops/" </a><i class="fa fa-facebook fa-3x"
+            style="color: #1877F2;"></i>
+            
+            <a href="https://www.instagram.com/zwartkops195/" </a><i class="fa fa-instagram fa-3x"
+            style="color: #E4405F;"></i>
+
+            <a href="https://chat.whatsapp.com/H3ejJSoZsU33615iT3PkES" </a><i class="fa fa-whatsapp fa-3x"
+            style="color: #25D366;"></i>
+
+        </div>
+    </footer>
+
+    <!-- Register Button -->
+    <a href="#" class="button Event" style="color:#ffffff;" onclick="showPopup(event)">Register</a>
+
+    <!-- Popup Modal Body and Contents -->
+    <div id="popupModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;">
+        <div style="background:#222; padding:30px 20px; border-radius:10px; max-width:90vw; width:350px; text-align:center; position:relative;">
+            <!-- Close Button for Popup -->
+            <span style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:22px;" onclick="closePopup()">&times;</span>
+            
+            <h2>Registrations Not Open</h2>
+            <p>Registrations don't start until <strong>July 31st</strong>.</p>
+            <p>If you're interested in sponsoring the event, please contact us at:</p>
+            
+            <!-- Contact Details of Popup -->
+            <p>
+                <a href="mailto:RT.Zwartkops.195@outlook.com" style="color:#ff7400;">RT.Zwartkops.195@outlook.com</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Popup Modal show Script -->
+    <script>
+    function showPopup(e) {
+        e.preventDefault();
+        document.getElementById('popupModal').style.display = 'flex';
+    }
+    function closePopup() {
+        document.getElementById('popupModal').style.display = 'none';
+    }
+    </script>
+    <a href="https://rtzwartkops195.github.io/Home/" style="color:#ffffff;" class="button Event">Go Back</a>
+    
+
+</body>
+
+</html>

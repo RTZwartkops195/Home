@@ -57,3 +57,10 @@ video {
     align-items: center;
     gap: 40px;
 }
+
+.Poster {
+    max-width: 650px;
+    width: 90%;
+    height: auto;
+    margin-bottom: 30px;
+}

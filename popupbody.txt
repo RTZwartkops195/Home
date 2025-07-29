@@ -1,0 +1,17 @@
+<!-- Popup Modal Body and Contents -->
+    <div id="popupModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;">
+        <div style="background:#222; padding:30px 20px; border-radius:10px; max-width:90vw; width:350px; text-align:center; position:relative;">
+            
+            <!-- Close Button for Popup -->
+            <span style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:22px;" onclick="closePopup()">&times;</span>
+            
+            <h2>Registrations Not Open</h2>
+            <p>Registrations don't start until <strong>July 31st</strong>.</p>
+            <p>If you're interested in sponsoring the event, please contact us at:</p>
+            
+            <!-- Contact Details of Popup -->
+            <p>
+                <a href="mailto:RT.Zwartkops.195@outlook.com" style="color:#ff7400;">RT.Zwartkops.195@outlook.com</a>
+            </p>
+        </div>
+    </div>

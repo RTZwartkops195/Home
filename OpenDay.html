@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- webpage tab title -->
+    <title>Zwartkops 195 Open Day</title>
+
+    <style>
+        body {
+            /* Hide content until image is loaded */
+            visibility: hidden;
+        }
+        
+    </style>
+
+    <!-- Script to ensure Poster is loaded before showing rest of page -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var poster = document.querySelector('.Poster');
+            if (poster.complete) {
+                document.body.style.visibility = 'visible';
+            } else {
+                poster.addEventListener('load', function () {
+                    document.body.style.visibility = 'visible';
+                });
+            }
+        });
+    </script>
+</head>
+
+<!-- Main Body of Page -->
+<body>
+    <!-- Poster Image -->
+    <img src="assets/img/OpenDay2025.jpg" alt="Open Day Poster" class="Poster">
+
+    <!-- Exit Button -->
+    <a href="https://rtzwartkops195.github.io/Home/" style="color:#ffffff;" class="button Event">Go Back</a>
+
+    <!-- Footer Containing Socials -->
+    <footer>
+        <h2>Follow Our Socials</h2>	
+            <div class="Social">
+                <a href="https://www.facebook.com/rt195zwartkops/" ><i class="fa fa-facebook fa-3x" style="color: #1877F2;"></i></a>
+                <a href="https://www.instagram.com/zwartkops195/" ><i class="fa fa-instagram fa-3x" style="color: #E4405F;"></i></a>
+                <a href="https://chat.whatsapp.com/H3ejJSoZsU33615iT3PkES" ><i class="fa fa-whatsapp fa-3x" style="color: #25D366;"></i></a>
+            </div>
+    </footer>
+
+    
+
+</body>
+
+</html>

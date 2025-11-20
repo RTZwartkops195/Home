@@ -30,8 +30,7 @@ a {
     max-width: 300px;
     margin: 10px auto;
     padding: 15px;
-    /*background: linear-gradient(45deg, #ff0000, #f0ff00, #ff9a00);*/
-    background: #FFD700;
+    background: linear-gradient(45deg, #ff0000, #f0ff00, #ff9a00);
 }
 
 video {

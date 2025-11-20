@@ -23,26 +23,15 @@ a {
     padding: 15px;
     background: linear-gradient(45deg, #ff0000, #ff7400, #ff1100);
 }
-
+/* */
 .recruit {
     display: block;
     width: 80%;
     max-width: 300px;
     margin: 10px auto;
     padding: 15px;
-    background: linear-gradient(45deg, #ff0000, #f0ff00, #ff9a00);
-}
-
-.instagram {
-    background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
-}
-
-.whatsapp {
-    background: linear-gradient(45deg, #075e54, #128c7e, #25d366);
-}
-
-.facebook {
-    background: linear-gradient(45deg, #4047ab, #2c26e1, #5665d4);
+    /*background: linear-gradient(45deg, #ff0000, #f0ff00, #ff9a00);*/
+    background: #FFD700;
 }
 
 video {

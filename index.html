@@ -14,19 +14,22 @@
 </head>
 
 <body>
-    <header>
+
+    <nav id="nav"></nav>
+    <div class="theme-switch-wrapper">
         <span id="toggle-icon" class="toggle-text">
-        <span>Light Mode</span>
-        <i class="toggle-sun" aria-hidden="true"></i>
-        <!-- <i class="toggle-moon"></i> -->
-    </span>
-    
-    <label class="theme-switch">
-        <input type="checkbox">
-        <div class="slider round">
-        </div>
-    </label>
-    </header>
+            <span>Light Mode</span>
+            <i class="fas fa-sun" aria-hidden="true"></i>
+            <!-- <i class="fas fa-moon"></i> -->
+        </span>
+
+        <label class="theme-switch">
+            <input type="checkbox">
+            <div class="slider round">
+            </div>
+        </label>
+    </div>
+
     <!-- Club logo -->
     <img src="assets/img/Logo.png" alt="Zwartkops 195 Logo" class="logo">
     <h1>UPCOMING EVENTS</h1>
@@ -56,5 +59,8 @@
             <i class="fa fa-whatsapp fa-3x" style="color: #25D366;"></i>
         </a>
     </div>
+    
+    <script src="script.js"></script>
+</body>
 
 </html>

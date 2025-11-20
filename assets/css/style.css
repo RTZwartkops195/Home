@@ -27,6 +27,7 @@ nav {
 
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--background);
     text-align: center;
     padding: 20px;
 }
@@ -46,7 +47,7 @@ h1 {
 }
 
 h2{
-    color: var(--on-background);
+    color: var(--on-background-alt);
 }
 
 .primary {

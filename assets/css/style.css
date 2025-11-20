@@ -153,7 +153,7 @@ video {
 }
 
 input:checked + .slider {
-  background: var(--primary-color);
+  background: var(--secondary-color);
 }
 
 input:checked + .slider::before {

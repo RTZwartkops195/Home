@@ -151,6 +151,14 @@ video {
   width: 26px;
 }
 
+input:checked + .slider {
+  background: var(--primary-color);
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
 .slider.round {
   border-radius: 34px;
 }

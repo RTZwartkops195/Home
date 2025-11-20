@@ -6,7 +6,6 @@ const toggleIcon = document.getElementById('toggle-icon');
 //Dark Mode Styles
 function darkMode() {
     nav.style.backgroundColor = 'rgb(0 0 0 / 50%)';
-    textBox.style.backgroundColor = 'rgb(255 255 255 / 50%)';
     //console.log(toggleIcon.children);
     toggleIcon.children[0].textContent = 'Dark Mode';
     toggleIcon.children[1].classList.replace('toggle-sun', 'toggle-moon');
@@ -16,7 +15,6 @@ function darkMode() {
 //Light Mode
 function lightMode() {
     nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
-    textBox.style.backgroundColor = 'rgb(0 0 0 / 50%)';
     toggleIcon.children[0].textContent = 'Light Mode';
     toggleIcon.children[1].classList.replace('toggle-moon', 'toggle-sun');
 }

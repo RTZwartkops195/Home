@@ -67,7 +67,14 @@ h2{
     max-width: 300px;
     margin: 10px auto;
     padding: 15px;
+}
+
+.Event {
     background: linear-gradient(45deg, #ff0000, #ff7400, #ff1100);
+}
+
+.Completed {
+    background: linear-gradient(45deg, #379c3c, #4fa561, #55db48);
 }
 /* */
 .recruit {

@@ -71,12 +71,19 @@ h2{
 
 .Event {
     background: linear-gradient(45deg, #ff0000, #ff7400, #ff1100);
+    pointer-events: none; /* Disables mouse clicks */
+    cursor: default; 
 }
+
+.bookingEvent {
+    background: linear-gradient(45deg, #ff0000, #ff7400, #ff1100);
+}
+
 
 .Completed {
     background: linear-gradient(45deg, #379c3c, #4fa561, #55db48);
     pointer-events: none; /* Disables mouse clicks */
-    cursor: default; 
+    cursor: default;
 }
 /* */
 .recruit {

@@ -20,8 +20,9 @@
 }
 
 nav {
-  z-index: 10; /*allows nav to always be on top, default z-index of everything else is always 1*/
+  z-index: 101; /*allows nav to always be on top of all other elements including theme toggle*/
   position: fixed;
+  top: 0;
   width: 100vw; /*as wide as the window*/
 }
 

@@ -67,6 +67,7 @@ h2{
     max-width: 300px;
     margin: 10px auto;
     padding: 15px;
+    background: linear-gradient(45deg, #ff0000, #ff7400, #ff1100)
 }
 
 .Event {

@@ -64,7 +64,7 @@ try {
 const themeSwitchWrapper = document.querySelector('.theme-switch-wrapper');
 if (themeSwitchWrapper) {
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 30) {
             themeSwitchWrapper.style.opacity = '0';
             themeSwitchWrapper.style.pointerEvents = 'none';
         } else {

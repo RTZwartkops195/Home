@@ -108,6 +108,7 @@ video {
   right: 25px;
   top: 30px;
   transition: opacity 0.3s ease;
+  margin-bottom: 30px
 }
 
 .theme-switch-wrapper span {

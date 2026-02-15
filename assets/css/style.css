@@ -106,6 +106,7 @@ video {
   position: fixed;
   right: 25px;
   top: 30px;
+  transition: opacity 0.3s ease;
 }
 
 .theme-switch-wrapper span {

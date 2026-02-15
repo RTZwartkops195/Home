@@ -60,4 +60,18 @@ try {
     // ignore localStorage access errors
 }
 
+//Hide theme switch when scrolling down
+const themeSwitchWrapper = document.querySelector('.theme-switch-wrapper');
+if (themeSwitchWrapper) {
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            themeSwitchWrapper.style.opacity = '0';
+            themeSwitchWrapper.style.pointerEvents = 'none';
+        } else {
+            themeSwitchWrapper.style.opacity = '1';
+            themeSwitchWrapper.style.pointerEvents = 'auto';
+        }
+    });
+}
+
 

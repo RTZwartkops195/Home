@@ -24,6 +24,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100vw; /*as wide as the window*/
+  margin-bottom: 20px;
 }
 
 body {
@@ -36,7 +37,6 @@ body {
 .logo {
     max-width: 200px;
     margin: 20px auto;
-    padding-top: 2%;
 }
 
 a {
@@ -108,7 +108,6 @@ video {
   right: 25px;
   top: 30px;
   transition: opacity 0.3s ease;
-  margin-bottom: 30px
 }
 
 .theme-switch-wrapper span {

@@ -31,7 +31,7 @@ body {
     background-color: var(--background);
     text-align: center;
     padding: 20px;
-    padding-top: 250px;
+    padding-top: 150px;
 }
 
 .logo {
@@ -106,7 +106,7 @@ video {
   z-index: 100; /*to be on top of the navigation*/
   position: fixed;
   right: 25px;
-  top: 180px;
+  top: 30px;
   transition: opacity 0.3s ease;
 }
 

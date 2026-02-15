@@ -31,6 +31,7 @@ body {
     background-color: var(--background);
     text-align: center;
     padding: 20px;
+    padding-top: 250px;
 }
 
 .logo {

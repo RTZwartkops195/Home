@@ -44,6 +44,11 @@ a {
     color: var(--primary-color);
 }
 
+p {
+  text-decoration: none;
+  color: var(--primary-color)
+}
+
 h1 {
     color: var(--on-background);
 }

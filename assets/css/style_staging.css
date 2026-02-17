@@ -161,6 +161,44 @@ video {
   color:var(--mailto-color);
 }
 
+/* Content Sections - Containers with Depth */
+.content-section {
+  background: var(--on-primary);
+  border-radius: 12px;
+  padding: 30px 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .content-section {
+  background: #1e1e1e;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .content-section:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Divider Lines */
+.section-divider {
+  width: 80%;
+  max-width: 1000px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+  margin: 30px auto;
+  border-radius: 2px;
+}
+
+/* Dark Mode Theme */
+[data-theme="dark"] .section-divider {
+  background: linear-gradient(90deg, transparent, rgba(255, 83, 83, 0.5), transparent);
+}
 
 /* Dark Mode Toggle */
 .theme-switch-wrapper {

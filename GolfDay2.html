@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Linking to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/js/theme-init.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- WebPage Tab Title -->
+    <title>Round Table - Golf Day</title>
+
+    <!-- Styling for Classes -->
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
+
+    <!-- Script that Hides Page until Poster is Loaded -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var poster = document.querySelector('.Poster');
+            function showPage() {
+                document.body.style.visibility = 'visible';
+            }
+            if (poster.complete) {
+                showPage();
+            } else {
+                poster.addEventListener('load', showPage);
+                poster.addEventListener('error', showPage);
+                // Fallback: show page after 3 seconds even if image hangs
+                setTimeout(showPage, 3000);
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Popup Modal Body and Contents -->
+    <div id="popupModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:1000; align-items:center; justify-content:center;">
+        <div style="background:var(--on-primary); padding:30px 20px; border-radius:10px; max-width:90vw; width:350px; text-align:center; position:relative; box-shadow:var(--box-shadow);">
+            
+            <!-- Close Button for Popup -->
+            <span style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:22px; color:var(--on-background);" onclick="closePopup()">&times;</span>
+            
+            <h2 style="color:var(--primary-variant);">Registrations Not Open</h2>
+            <p style="color:var(--on-background);">Registrations don't start until <strong>March 1st</strong>.</p>
+            <p style="color:var(--on-background);">If you're interested in sponsoring the event, please contact us at:</p>
+            
+            <!-- Contact Details of Popup -->
+            <p>
+                <a href="mailto:RT.Zwartkops.195@outlook.com" id="rtMailbox">RT.Zwartkops.195@outlook.com</a>
+            </p>
+        </div>
+    </div>
+    <script>
+        function showPopup(e) {
+            e.preventDefault();
+            document.getElementById('popupModal').style.display = 'flex';
+        }
+        function closePopup() {
+            document.getElementById('popupModal').style.display = 'none';
+        }
+    </script>
+
+    <h1>Round Table 195 Zwartkops Golf Day</h1>
+
+    <!-- Poster Image -->
+<img src="assets/img/GolfDay2026_Poster.png" alt="Golf Day Poster" class="Poster" onerror="document.body.style.visibility='visible';">
+
+    <p>Join us for a day of golf, fun, and camaraderie!</p>
+    <p>Date: 26th March 2026</p>
+
+    <!-- Register Button -->
+    <a href="" onclick="showPopup(event)" class="button" style="color:#ffffff;">Register</a>
+
+    <!-- Exit Button -->
+    <a href="https://rtzwartkops195.github.io/Home/" style="color:#ffffff;" class="button">Go Back</a>
+
+    <!-- Footer containing Socials -->
+    <footer>
+        <h2>Follow Our Socials</h2>
+        <div class="Social">
+
+            <a href="https://www.facebook.com/rt195zwartkops/"> <i class="fa fa-facebook fa-3x"
+            style="color: #1877F2;"></i></a>
+
+            <a href="https://www.instagram.com/zwartkops195/"> <i class="fa fa-instagram fa-3x"
+            style="color: #E4405F;"></i></a>
+
+            <a href="https://chat.whatsapp.com/LOPv7E57Gkh2Cl9Z8ooIkr"> <i class="fa fa-whatsapp fa-3x"style="color: #25D366; "></i></a>
+
+        </div>
+    </footer>
+
+
+
+</body>
+
+
+</html>

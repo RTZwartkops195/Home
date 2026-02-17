@@ -59,6 +59,39 @@ h2{
     color: var(--on-background-alt);
 }
 
+/* Events Container - Side by Side on Desktop, Stacked on Mobile */
+.events-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.events-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.events-section h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Mobile Responsive - Stack sections vertically */
+@media (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .events-section {
+    max-width: 100%;
+  }
+}
+
 .primary {
   background: var(--primary-color);
   color: var(--on-primary);

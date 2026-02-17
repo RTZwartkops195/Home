@@ -1,0 +1,202 @@
+:root {
+  --primary-color: black;
+  --primary-variant: #333333;
+  --secondary-color: #ff5353;
+  --mailto-color:#4e4ed8;
+  --on-primary: rgb(250, 250, 250);
+  --on-background: rgb(66, 66, 66);
+  --on-background-alt: rgba(66, 66, 66, 0.7);
+  --background: rgb(255, 255, 255);
+  --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] {
+  --primary-color: rgb(255, 255, 255);
+  --primary-variant: #c5c5c5;
+  --secondary-color: #ff5353;
+  --mailto-color:#ff7400;
+  --on-primary: #000;
+  --on-background: rgba(255, 255, 255, 0.9);
+  --on-background-alt: rgba(255, 255, 255, 0.7);
+  --background: #121212;
+}
+
+nav {
+  z-index: 101; /*allows nav to always be on top of all other elements including theme toggle*/
+  position: fixed;
+  top: 0;
+  width: 100vw; /*as wide as the window*/
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    text-align: center;
+    padding: 20px;
+    padding-top: 80px;
+}
+
+.logo {
+    max-width: 200px;
+    margin: 20px auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+p {
+  text-decoration: none;
+  color: var(--primary-color)
+}
+
+h1 {
+    color: var(--on-background);
+}
+
+h2{
+    color: var(--on-background-alt);
+}
+
+.primary {
+  background: var(--primary-color);
+  color: var(--on-primary);
+}
+
+.secondary {
+  border: 2px solid var(--secondary-color);
+}
+
+.button {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 15px;
+    background: linear-gradient(45deg, #ff0000, #ff7400, #ff1100)
+}
+
+.Event {
+    background: linear-gradient(45deg, #ff0000, #ff7400, #ff1100);
+    pointer-events: none;
+    cursor: default; 
+}
+
+.bookingEvent {
+    background: linear-gradient(45deg, #ff0000, #ff7400, #ff1100);
+}
+
+
+.Completed {
+    background: linear-gradient(45deg, #379c3c, #4fa561, #55db48);
+    pointer-events: none;
+    cursor: default;
+}
+/* */
+.recruit {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 15px;
+    background: linear-gradient(45deg, #ff0000, #f0ff00, #ff9a00);
+}
+
+video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.Social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.Poster {
+    max-width: 650px;
+    width: 90%;
+    max-height: 925;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#rtMailbox {
+  color:var(--mailto-color);
+}
+
+
+/* Dark Mode Toggle */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  z-index: 100; /*to be on top of the navigation*/
+  position: fixed;
+  right: 25px;
+  top: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.theme-switch-wrapper span {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.toggle-text {
+  position: relative;
+  top: -4px;
+  right: 5px;
+  color: var(--on-background);
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  background: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background: var(--secondary-color);
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}

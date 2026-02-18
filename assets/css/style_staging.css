@@ -111,6 +111,18 @@ h2{
     font-size: 1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.button:active {
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
 }
 
 .Event {
@@ -123,6 +135,15 @@ h2{
     background: linear-gradient(45deg, #ff0000, #ff7400, #ff1100);
 }
 
+.bookingEvent:hover {
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.bookingEvent:active {
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
 
 .Completed {
     background: linear-gradient(45deg, #379c3c, #4fa561, #55db48);
@@ -139,6 +160,18 @@ h2{
     background: linear-gradient(45deg, #ff0000, #f0ff00, #ff9a00);
     border-radius: 8px;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+    cursor: pointer;
+}
+
+.recruit:hover {
+    box-shadow: 0 8px 25px rgba(255, 165, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.recruit:active {
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
 }
 
 /* Mobile Responsive - Small phones (under 480px) */

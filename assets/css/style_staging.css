@@ -206,6 +206,35 @@ h2{
     }
 }
 
+/* Extra small phones: avoid overflow and ensure buttons stay centered */
+@media (max-width: 400px) {
+  .events-section {
+    min-width: 0; /* allow the flex children to shrink */
+    padding: 0 8px;
+  }
+
+  .button {
+    width: calc(100% - 16px);
+    max-width: none;
+    padding: 10px 8px;
+    font-size: 0.85rem;
+    margin: 6px auto;
+  }
+
+  .recruit {
+    width: calc(100% - 16px);
+    max-width: none;
+    padding: 10px 8px;
+    font-size: 0.85rem;
+    margin: 6px auto;
+  }
+
+  body {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
 video {
     display: block;
     margin: 0 auto;

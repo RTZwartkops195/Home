@@ -59,6 +59,39 @@ h2{
     color: var(--on-background-alt);
 }
 
+/* Events Container - Side by Side on Desktop, Stacked on Mobile */
+.events-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.events-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.events-section h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Mobile Responsive - Stack sections vertically */
+@media (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .events-section {
+    max-width: 100%;
+  }
+}
+
 .primary {
   background: var(--primary-color);
   color: var(--on-primary);
@@ -74,7 +107,22 @@ h2{
     max-width: 300px;
     margin: 10px auto;
     padding: 15px;
-    background: linear-gradient(45deg, #ff0000, #ff7400, #ff1100)
+    background: linear-gradient(45deg, #ff0000, #ff7400, #ff1100);
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.button:active {
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
 }
 
 .Event {
@@ -87,6 +135,15 @@ h2{
     background: linear-gradient(45deg, #ff0000, #ff7400, #ff1100);
 }
 
+.bookingEvent:hover {
+    box-shadow: 0 8px 25px rgba(255, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.bookingEvent:active {
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
 
 .Completed {
     background: linear-gradient(45deg, #379c3c, #4fa561, #55db48);
@@ -101,6 +158,81 @@ h2{
     margin: 10px auto;
     padding: 15px;
     background: linear-gradient(45deg, #ff0000, #f0ff00, #ff9a00);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+    cursor: pointer;
+}
+
+.recruit:hover {
+    box-shadow: 0 8px 25px rgba(255, 165, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.recruit:active {
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Mobile Responsive - Small phones (under 480px) */
+@media (max-width: 480px) {
+    .button {
+        max-width: 90%;
+        padding: 12px 10px;
+        font-size: 0.9rem;
+        margin: 8px auto;
+    }
+
+    .recruit {
+        max-width: 90%;
+        padding: 12px 10px;
+        font-size: 0.9rem;
+        margin: 8px auto;
+    }
+}
+
+/* Tablets and medium screens */
+@media (max-width: 600px) {
+    .button {
+        max-width: 95%;
+        padding: 13px 12px;
+        font-size: 0.95rem;
+    }
+
+    .recruit {
+        max-width: 95%;
+        padding: 13px 12px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Extra small phones: avoid overflow and ensure buttons stay centered */
+@media (max-width: 400px) {
+  .events-section {
+    min-width: 0; /* allow the flex children to shrink */
+    padding: 0 8px;
+  }
+
+  .button {
+    width: calc(100% - 16px);
+    max-width: none;
+    padding: 10px 8px;
+    font-size: 0.85rem;
+    margin: 6px auto;
+  }
+
+  .recruit {
+    width: calc(100% - 16px);
+    max-width: none;
+    padding: 10px 8px;
+    font-size: 0.85rem;
+    margin: 6px auto;
+  }
+
+  body {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
 
 video {
@@ -128,6 +260,44 @@ video {
   color:var(--mailto-color);
 }
 
+/* Content Sections - Containers with Depth */
+.content-section {
+  background: var(--on-primary);
+  border-radius: 12px;
+  padding: 30px 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .content-section {
+  background: #1e1e1e;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .content-section:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Section Divider Lines */
+.section-divider {
+  width: 80%;
+  max-width: 1000px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+/* Dark Mode Theme */
+[data-theme="dark"] .section-divider {
+  background: linear-gradient(90deg, transparent, rgba(255, 83, 83, 0.5), transparent);
+}
 
 /* Dark Mode Toggle */
 .theme-switch-wrapper {

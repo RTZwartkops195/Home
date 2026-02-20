@@ -290,18 +290,12 @@ form {
   margin: 0 auto;
 }
 
-label {
-  display: block;
-  margin-bottom: 15px;
-  color: var(--on-background);
-  font-weight: bold;
-}
-
 input[type="email"],
-input[type="file"] {
+input[type="file"],
+input[type="tel"] {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
+  margin-bottom: 15px;
   border: 2px solid var(--primary-variant);
   border-radius: 5px;
   background: var(--on-primary);
@@ -310,8 +304,25 @@ input[type="file"] {
   transition: border-color 0.3s ease;
 }
 
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid var(--primary-variant);
+  border-radius: 5px;
+  background: var(--on-primary);
+  color: var(--on-background);
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 120px;
+  transition: border-color 0.3s ease;
+}
+
 input[type="email"]:focus,
-input[type="file"]:focus {
+input[type="file"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
   outline: none;
   border-color: var(--secondary-color);
 }

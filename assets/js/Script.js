@@ -74,4 +74,22 @@ if (themeSwitchWrapper) {
     });
 }
 
+// Form submission handler to clear inputs after submit
+const form = document.querySelector('form');
+if (form) {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        fetch(form.action, {
+            method: form.method,
+            body: formData
+        }).then(response => {
+            if (response.ok) {
+                form.reset(); // Clears all form inputs
+            }
+        }).catch(error => {
+            console.error('Form submission error:', error);
+        });
+    });
+}
 

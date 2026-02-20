@@ -26,10 +26,22 @@
             method="POST"
             enctype="multipart/form-data"
             >
-            <input type="email" name="email" placeholder="Your email">
-            <input type="tel" name="phone" placeholder="Your phone number">
-            <textarea name="request" placeholder="Your request or message"></textarea>
-            <input type="file" name="upload">
+            <label>
+                Your email:
+                <input type="email" name="email" placeholder="Your email">
+            </label>
+            <label>
+                Your phone number:
+                <input type="tel" name="phone" placeholder="Your phone number">
+            </label>
+            <label>
+                Your request:
+                <textarea name="request" placeholder="Your request or message"></textarea>
+            </label>
+            <label>
+                Your file:
+                <input type="file" name="upload">
+            </label>
             <button type="submit">Send</button>
         </form>
     </div>

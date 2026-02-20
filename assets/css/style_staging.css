@@ -290,12 +290,19 @@ form {
   margin: 0 auto;
 }
 
+label {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--on-background);
+  font-weight: bold;
+}
+
 input[type="email"],
 input[type="file"],
 input[type="tel"] {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-top: 5px;
   border: 2px solid var(--primary-variant);
   border-radius: 5px;
   background: var(--on-primary);
@@ -307,7 +314,7 @@ input[type="tel"] {
 textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-top: 5px;
   border: 2px solid var(--primary-variant);
   border-radius: 5px;
   background: var(--on-primary);

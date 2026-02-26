@@ -93,23 +93,24 @@
             const form = this;
             const formData = new FormData(form);
             
+            // Convert FormData to JSON object
+            const data = Object.fromEntries(formData);
+            
             // Submit form to formspree
             fetch(form.action, {
                 method: 'POST',
-                body: formData,
+                body: JSON.stringify(data),
                 headers: {
+                    'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 }
             })
-            .then(response => {
-                if (response.ok) {
-                    // Show thank you popup only after successful submission
-                    document.getElementById('thankYouModal').style.display = 'flex';
-                    // Clear form fields after submission
-                    form.reset();
-                } else {
-                    alert('There was an error submitting the form. Please try again.');
-                }
+            .then(response => response.json())
+            .then(data => {
+                // Show thank you popup only after successful submission
+                document.getElementById('thankYouModal').style.display = 'flex';
+                // Clear form fields after submission
+                form.reset();
             })
             .catch(error => {
                 console.error('Error:', error);

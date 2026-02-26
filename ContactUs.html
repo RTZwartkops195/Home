@@ -39,7 +39,7 @@
                 Your message:
                 <textarea name="request" placeholder="Have anything you'd like to let us know or ask?"></textarea>
             </label>
-            <button type="submit">Send</button>
+            <button type="submit" onclick="showPopup(e)">Send</button>
         </form>
     </div>
 
@@ -83,40 +83,13 @@
 
     <script src="assets/js/Script.js"></script>
     <script>
-        function closeThankYouPopup() {
-            document.getElementById('thankYouModal').style.display = 'none';
-        }
-
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        function showPopup(e) {
             e.preventDefault();
-            
-            const form = this;
-            const formData = new FormData(form);
-            
-            // Convert FormData to JSON object
-            const data = Object.fromEntries(formData);
-            
-            // Submit form to formspree
-            fetch(form.action, {
-                method: 'POST',
-                body: JSON.stringify(data),
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Show thank you popup only after successful submission
-                document.getElementById('thankYouModal').style.display = 'flex';
-                // Clear form fields after submission
-                form.reset();
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('There was an error submitting the form. Please try again.');
-            });
-        });
+            document.getElementById('popupModal').style.display = 'flex';
+        }
+        function closePopup() {
+            document.getElementById('popupModal').style.display = 'none';
+        }
     </script>
 </body>
 
